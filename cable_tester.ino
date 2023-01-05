@@ -48,7 +48,7 @@ short minidin8_pin_assignments[] = { MD8_1, MD8_2, MD8_3, MD8_4, MD8_5, MD8_6, M
 char minidin8_pin_names[minidin8_pin_count][7] = { "MD8_1 ", "MD8_2 ", "MD8_3 ", "MD8_4 ", "MD8_5 ", "MD8_6 ", "MD8_7 ", "MD8_8 ", "MD8_G ", "DE9_1 ", "DE9_2 ", "DE9_3 ", "DE9_4 ", "DE9_5 ", "DE9_6", "DE9_7 ", "DE9_8 ", "DE9_9 ", "DE9_G " };
 short state, new_state = STATE_NOGOOD;
 
-// DIN5 table - maps the valid connections between the DIN5 and DE9 cable
+// DIN5 table - maps the valid connections of the DIN5 to DE9 cable
 boolean din5_truth_table[din5_pin_count][din5_pin_count] =
 { /*            5  5  5  5  5  5  9  9  9  9  9  9  9  9  9  9 */
   /*            /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  / */
@@ -71,7 +71,7 @@ boolean din5_truth_table[din5_pin_count][din5_pin_count] =
   /* Row 15 */ {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}  // DE9_G out
 };
 
-// MiniDIN8 table - maps the valid connections between the DIN5 and MiniDIN8 cable
+// MiniDIN8 table - maps the valid connections of the MiniDIN8 to DE9 cable
 boolean minidin8_truth_table[minidin8_pin_count][minidin8_pin_count] =
 { /*            8  8  8  8  8  8  8  8  8  9  9  9  9  9  9  9  9  9  9  */
   /*            /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  */
@@ -97,7 +97,7 @@ boolean minidin8_truth_table[minidin8_pin_count][minidin8_pin_count] =
   /* Row 18 */ {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}  // DE9_G out
 };
 
-// New MiniDIN8 table - maps the valid connections between the DIN5 and another MiniDIN8 cable
+// New MiniDIN8 table - maps the valid connections of another recipe of MiniDIN8 to DE9 cable
 boolean new_minidin8_truth_table[minidin8_pin_count][minidin8_pin_count] =
 { /*            8  8  8  8  8  8  8  8  8  9  9  9  9  9  9  9  9  9  9  */
   /*            /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  */
